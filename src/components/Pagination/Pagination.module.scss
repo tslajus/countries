@@ -1,0 +1,18 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(center, center, $spacer-md);
+  @include colors($color-light);
+  @include sizes(100%);
+
+  filter: $shadow-sm-up;
+  padding: $spacer-md;
+  user-select: none;
+  z-index: $z-index-top;
+}
+
+@include mediaQuery($screen-xs) {
+  .container {
+    gap: $spacer-sm;
+  }
+}

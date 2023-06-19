@@ -1,0 +1,39 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(center, space-between);
+  @include colors($color-light);
+  @include sizes(100%);
+
+  filter: $shadow-sm;
+  padding: $spacer-md $spacer-xxl;
+  user-select: none;
+  z-index: $z-index-top;
+}
+
+.filters {
+  @include flex(center, start, $spacer-md);
+}
+
+@include mediaQuery($screen-md) {
+  .container {
+    padding: $spacer-lg $spacer-lg;
+  }
+}
+
+@include mediaQuery($screen-xs) {
+  .container {
+    @include flex(center, space-between, $spacer-lg);
+  }
+
+  .filters {
+    @include flex(stretch, start, $spacer-md, column);
+    @include sizes(100%);
+  }
+
+  .button {
+    @include sizes(100%);
+
+    text-align: center;
+  }
+}

@@ -1,0 +1,40 @@
+@import "./variables.scss";
+
+::-webkit-scrollbar {
+  width: $sidebar-size;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin: $spacer-sm;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-primary;
+  border-radius: $border-radius;
+
+  &:hover {
+    background: $color-primary;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $color-primary transparent;
+}
+
+::-moz-selection {
+  color: $color-light;
+  background: $color-dark;
+}
+
+::selection {
+  color: $color-light;
+  background: $color-dark;
+}
+
+@media screen and (max-width: 1200px) {
+  ::-webkit-scrollbar-thumb {
+    background: $color-light;
+  }
+}

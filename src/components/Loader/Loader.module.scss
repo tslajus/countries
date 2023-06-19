@@ -1,0 +1,13 @@
+@import "@/index.scss";
+
+.container {
+  @include flex();
+  @include colors($color-medium);
+  @include sizes(100%, 100%);
+  @include typography();
+
+  opacity: $transparency;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

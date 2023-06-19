@@ -1,0 +1,61 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(start, space-between, $spacer-sm, column);
+  @include sizes(25%);
+
+  padding: $spacer-md $spacer-lg;
+  margin: $spacer-md 0;
+  border-left: $border-thin;
+}
+
+.row {
+  @include flex(center, space-between);
+  @include sizes(100%);
+}
+
+@include mediaQuery($screen-xl) {
+  .container {
+    @include sizes(35%);
+  }
+}
+
+@include mediaQuery($screen-lg) {
+  .container {
+    @include sizes(30%);
+  }
+}
+
+@include mediaQuery($screen-md) {
+  .container {
+    @include sizes(35%);
+  }
+}
+
+@include mediaQuery($screen-sm) {
+  .container {
+    @include sizes(50%);
+  }
+}
+
+@include mediaQuery($screen-xs) {
+  .container {
+    @include flex(center, space-between, 0, row);
+    @include sizes(100%);
+
+    padding: $spacer-md;
+    margin: 0;
+    border-left: 1px solid $color-medium;
+  }
+
+  .row {
+    @include flex(center, start, $spacer-md);
+    @include sizes(fit-content);
+  }
+}
+
+@include mediaQuery($screen-xs) {
+  .row {
+    gap: $spacer-sm;
+  }
+}

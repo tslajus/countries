@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+@mixin flex($align: center, $justify: center, $gap: 0, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin colors($bg, $font: $color-dark) {
+  background-color: $bg;
+  color: $font;
+}
+
+@mixin sizes(
+  $width: auto,
+  $height: auto,
+  $maxWidth: none,
+  $maxHeight: none,
+  $minWidth: none,
+  $minHeight: none
+) {
+  width: $width;
+  height: $height;
+  max-width: $maxWidth;
+  max-height: $maxHeight;
+  min-width: $minWidth;
+  min-height: $minHeight;
+}
+
+@mixin typography(
+  $family: $font-family-heading,
+  $size: $font-size-heading,
+  $weight: 700
+) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin mediaQuery($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

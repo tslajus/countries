@@ -1,0 +1,40 @@
+@import "@/index.scss";
+
+.button {
+  @include flex();
+  @include colors($color-light);
+  @include sizes(auto, $button-size);
+
+  cursor: pointer;
+  filter: $shadow-sm;
+  padding: $spacer-md;
+  border-radius: $border-radius;
+  transition: background-color $transition-fast, color $transition-fast;
+
+  @media (hover: hover) {
+    &:hover {
+      @include colors($color-dark, $color-light);
+    }
+  }
+
+  &[data-active="true"] {
+    @include colors($color-dark, $color-light);
+  }
+
+  &:focus-visible {
+    @include colors($color-primary, $color-light);
+
+    outline: none;
+  }
+
+  &:disabled {
+    @include colors(transparent);
+
+    cursor: auto;
+  }
+}
+
+.hidden {
+  position: absolute;
+  visibility: hidden;
+}

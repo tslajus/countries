@@ -1,0 +1,11 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(center, end, $spacer-md);
+
+  padding-right: $sidebar-size;
+}
+
+.button {
+  width: $button-size;
+}

@@ -1,0 +1,21 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(center, space-between, 0, column);
+  @include colors($color-medium);
+  @include sizes(70%, 80vh, 196rem, 108rem);
+
+  filter: $shadow-lg;
+  margin: auto;
+  border-radius: $border-radius;
+  position: relative;
+  overflow: hidden;
+}
+
+@include mediaQuery($screen-lg) {
+  .container {
+    @include sizes(100%, 100vh);
+    height: 100 dvh;
+    border-radius: 0;
+  }
+}

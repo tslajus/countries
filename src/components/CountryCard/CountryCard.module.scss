@@ -1,0 +1,26 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(center, space-between);
+  @include colors($color-light);
+
+  filter: $shadow-sm;
+  border-radius: $border-radius;
+}
+
+.name {
+  @include typography();
+  padding: $spacer-lg;
+}
+
+@include mediaQuery($screen-xs) {
+  .container {
+    @include flex(stretch, space-between, 0, column);
+  }
+  .name {
+    @include typography($font-family-heading, $font-size-heading-sm);
+
+    padding: $spacer-md;
+    border-bottom: $border-thin;
+  }
+}

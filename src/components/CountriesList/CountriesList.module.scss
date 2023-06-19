@@ -1,0 +1,15 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(stretch, start, $spacer-lg, column);
+  @include sizes(100%);
+
+  padding: $spacer-xl $spacer-xxl;
+  overflow-y: scroll;
+}
+
+@include mediaQuery($screen-md) {
+  .container {
+    padding: $spacer-lg $spacer-lg;
+  }
+}
