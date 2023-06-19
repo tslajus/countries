@@ -20,7 +20,7 @@ The application is brought to life using:
 
 ## Live Demo 
 
-You can see the live demo of the project at https://countries.slajus.dev 
+You can see the live demo of the project [there](https://world-countries-task.netlify.app/)
 
 Enjoy! 
 
